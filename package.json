@@ -1,0 +1,54 @@
+{
+  "name": "@rmajewski/cucumber-js-html-reporter",
+  "version": "1.0.0",
+  "description": "Generates Cucumber HTML reports",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.ts.js",
+  "packageManager": "pnpm@8.15.3",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint \"**/*.{ts,json}\" --ignore-path .gitignore",
+    "lint:fix": "npm run lint -- --fix",
+    "format": "prettier \"**/*.{css,html,json,md,ts,tsx,vue,yml}\" --write --ignore-path .gitignore",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": {
+    "name": "René Majewski",
+    "url": "https://github.com/RMajewski"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RMajewski/cucumber-js-html-reporter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RMajewski/cucumber-js-html-reporter/issues"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/npm": "^11.0.2",
+    "@types/node": "^20.11.20",
+    "@typescript-eslint/eslint-plugin": "^7.0.2",
+    "@typescript-eslint/parser": "^7.0.2",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "lint-staged": "^15.2.2",
+    "picocolors": "^1.0.0",
+    "semantic-release": "^23.0.2",
+    "simple-git-hooks": "^2.9.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@cucumber/cucumber": "^10.3.1"
+  },
+  "lint-staged": {
+    "**/*.ts": "eslint --cache --ignore-path .gitignore"
+  },
+  "simple-git-hooks": {
+    "commit-msg": "node scripts/verifyCommit.mjs $1",
+    "pre-commit": "pnpm exec lint-staged"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "CommonJS",
+    "declaration": true,
+    "outDir": "./dist",
+    "experimentalDecorators": true,
+    "strict": true,
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "esModuleInterop": true,
+    "sourceMap": true
+  },
+  "exclude": ["node_modules", "**/*.spec.ts", "dist", "tests", "examples"]
+}

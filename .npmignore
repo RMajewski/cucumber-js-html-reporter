@@ -1,0 +1,24 @@
+# source
+scripts
+# src
+tests
+index.ts
+package-lock.json
+tslint.json
+tsconfig.json
+.eslintcache
+.prettierrc
+.prettierrc.json
+.releaserc
+.commitlintrc.json
+.eslintignore
+.eslintrc.js
+.eslintrc.json
+.npm
+
+# Visual Studio Code
+.vscode
+
+# ci
+.pnpm-store
+bitbucket-pipelines.yml
