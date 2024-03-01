@@ -6,9 +6,9 @@ on:
     branches:
       - master
       - beta
-
-permissions:
-  contents: read
+env:
+  GH_TOKEN: ${{secrets.GH_TOKEN}}
+  NPM_TOKEN: ${{secrets.NPM_TOKEN}}
 
 jobs:
   release:
@@ -35,7 +35,4 @@ jobs:
       - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
         run: npm audit signatures
       - name: Release
-        env:
-          GITHUB_TOKEN: ${{secrets.GH_TOKEN}}
-          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
         run: npx semantic-release
