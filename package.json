@@ -12,7 +12,7 @@
     "lint": "eslint \"**/*.{ts,json}\" --ignore-path .gitignore",
     "lint:fix": "npm run lint -- --fix",
     "format": "prettier \"**/*.{css,html,json,md,ts,tsx,vue,yml}\" --write --ignore-path .gitignore",
-    "publish": "env-cmd -f .env npx semantic-release --no-ci",
+    "publish": "env-cmd -f .env npx semantic-release",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
