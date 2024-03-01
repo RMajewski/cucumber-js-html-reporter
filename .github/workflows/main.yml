@@ -1,5 +1,7 @@
 name: Release
 on:
+  repository_dispatch:
+
   push:
     branches:
       - master
@@ -25,7 +27,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "lts/*"
+          node-version: 'lts/*'
       - name: Install PNPM
         uses: pnpm/action-setup@v3
       - name: Install dependencies
