@@ -6,6 +6,7 @@ index.ts
 package-lock.json
 tslint.json
 tsconfig.json
+.env*
 .eslintcache
 .prettierrc
 .prettierrc.json
@@ -15,6 +16,7 @@ tsconfig.json
 .eslintrc.js
 .eslintrc.json
 .npm
+*.tgz
 
 # Visual Studio Code
 .vscode
