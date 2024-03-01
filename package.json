@@ -8,10 +8,11 @@
   "packageManager": "pnpm@8.15.3",
   "scripts": {
     "build": "tsc",
+    "build:watch": "tsc -w",
     "lint": "eslint \"**/*.{ts,json}\" --ignore-path .gitignore",
     "lint:fix": "npm run lint -- --fix",
     "format": "prettier \"**/*.{css,html,json,md,ts,tsx,vue,yml}\" --write --ignore-path .gitignore",
-    "publish": "env-cmd -f .env npx semantic-release",
+    "publish": "env-cmd -f .env npx semantic-release --no-ci",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -40,6 +41,7 @@
     "env-cmd": "^10.1.0",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
+    "eta": "^3.2.0",
     "lint-staged": "^15.2.2",
     "picocolors": "^1.0.0",
     "semantic-release": "^23.0.2",
@@ -48,7 +50,11 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "@cucumber/cucumber": "^10.3.1"
+    "@cucumber/cucumber": "^10.3.1",
+    "commander": "^12.0.0"
+  },
+  "bin": {
+    "generateCucumberReport": "bin/generateCucumberReport.js"
   },
   "lint-staged": {
     "**/*.ts": "eslint --cache --ignore-path .gitignore"

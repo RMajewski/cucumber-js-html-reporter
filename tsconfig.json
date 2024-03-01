@@ -9,7 +9,8 @@
     "strictNullChecks": false,
     "noImplicitAny": false,
     "esModuleInterop": true,
-    "sourceMap": true
+    "sourceMap": true,
+    "resolveJsonModule": true
   },
   "exclude": ["node_modules", "**/*.spec.ts", "dist", "tests", "examples"]
 }
