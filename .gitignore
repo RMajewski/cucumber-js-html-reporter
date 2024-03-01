@@ -9,3 +9,6 @@ tests/test-reports
 # local packages
 *.tgz
 .eslintcache
+
+# Environments
+.env*

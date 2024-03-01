@@ -11,6 +11,7 @@
     "lint": "eslint \"**/*.{ts,json}\" --ignore-path .gitignore",
     "lint:fix": "npm run lint -- --fix",
     "format": "prettier \"**/*.{css,html,json,md,ts,tsx,vue,yml}\" --write --ignore-path .gitignore",
+    "publish": "env-cmd -f .env npx semantic-release",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -20,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RMajewski/cucumber-js-html-reporter.git"
+    "url": "git@github.com:RMajewski/cucumber-js-html-reporter.git"
   },
   "bugs": {
     "url": "https://github.com/RMajewski/cucumber-js-html-reporter/issues"
@@ -32,6 +33,7 @@
     "@types/node": "^20.11.20",
     "@typescript-eslint/eslint-plugin": "^7.0.2",
     "@typescript-eslint/parser": "^7.0.2",
+    "env-cmd": "^10.1.0",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "lint-staged": "^15.2.2",
