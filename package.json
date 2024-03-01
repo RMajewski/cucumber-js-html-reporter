@@ -1,6 +1,6 @@
 {
   "name": "@rmajewski/cucumber-js-html-reporter",
-  "version": "1.0.0",
+  "version": "1.0.0-beta.1",
   "description": "Generates Cucumber HTML reports",
   "license": "MIT",
   "main": "dist/index.js",
@@ -22,6 +22,10 @@
   "repository": {
     "type": "git",
     "url": "git@github.com:RMajewski/cucumber-js-html-reporter.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "scope": "@rmajewski"
   },
   "bugs": {
     "url": "https://github.com/RMajewski/cucumber-js-html-reporter/issues"
