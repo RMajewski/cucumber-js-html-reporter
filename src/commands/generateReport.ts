@@ -15,13 +15,20 @@ function readConfigFile(configFilePath: string): any | undefined {
     )
     return {}
   }
-  const configJsonString = readFileSync(configFilePath)
+  const configJsonString = readFileSync(configFilePath, 'utf-8')
+  return JSON.parse(configJsonString)
 }
 
 function readConfig(config: any): Options {
-  return {
+  const options: Options = {
+    outputFile:
+      config.outputFile !== undefined
+        ? config.outputFile
+        : 'reports/cucumber.html',
+    templateDir: './templates',
     templateName: 'html/main',
   }
+  return options
 }
 
 const cli = new Command()
@@ -34,6 +41,7 @@ cli
       const options = readConfig(config)
       const reporter = new Reporter(options)
       reporter.generate()
+      reporter.save()
     }
   })
   .parse(process.argv)
